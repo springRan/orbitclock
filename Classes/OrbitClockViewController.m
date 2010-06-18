@@ -93,7 +93,7 @@
 	}
 	
 	self.centisecond = 0;
-	self.second = [components second] - 1; //Needed to sync with system clock?
+	self.second = [components second];
 	self.minute = [components minute] * 60 + self.second;
 	self.hour = new_hour * 3600 + self.minute;
 	

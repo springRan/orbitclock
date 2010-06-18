@@ -30,9 +30,9 @@
 	};
 	28D7ACF70DDB3853001CB0EB /* OrbitClockViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1093, 2795}}";
-			sepNavSelRange = "{5196, 0}";
-			sepNavVisRange = "{0, 1363}";
+			sepNavIntBoundsRect = "{{0, 0}, {1093, 2717}}";
+			sepNavSelRange = "{3113, 0}";
+			sepNavVisRange = "{2499, 1150}";
 			sepNavWindowFrame = "{{15, 179}, {1249, 594}}";
 		};
 	};
@@ -95,19 +95,19 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 298525641;
-			PBXWorkspaceStateSaveDate = 298525641;
+			PBXPerProjectTemplateStateSaveDate = 298526089;
+			PBXWorkspaceStateSaveDate = 298526089;
 		};
 		perUserProjectItems = {
 			6063E66211CA1BBF009C398B /* PBXTextBookmark */ = 6063E66211CA1BBF009C398B /* PBXTextBookmark */;
+			608BD54311CB25F2007CE542 /* PBXBookmark */ = 608BD54311CB25F2007CE542 /* PBXBookmark */;
+			608BD54411CB25F2007CE542 /* PBXTextBookmark */ = 608BD54411CB25F2007CE542 /* PBXTextBookmark */;
+			608BD55A11CB2783007CE542 /* PBXTextBookmark */ = 608BD55A11CB2783007CE542 /* PBXTextBookmark */;
 			60900A3411BCB4AB00EDF48C /* PBXTextBookmark */ = 60900A3411BCB4AB00EDF48C /* PBXTextBookmark */;
 			60900A3511BCB4AB00EDF48C /* PBXTextBookmark */ = 60900A3511BCB4AB00EDF48C /* PBXTextBookmark */;
 			60D96DBF11CB242800B0A36D /* PBXTextBookmark */ = 60D96DBF11CB242800B0A36D /* PBXTextBookmark */;
 			60D96DC011CB242800B0A36D /* PlistBookmark */ = 60D96DC011CB242800B0A36D /* PlistBookmark */;
-			60D96DC111CB242800B0A36D /* PBXBookmark */ = 60D96DC111CB242800B0A36D /* PBXBookmark */;
-			60D96DC211CB242800B0A36D /* PBXBookmark */ = 60D96DC211CB242800B0A36D /* PBXBookmark */;
 			60F858D111CB20550094A7A4 /* PBXTextBookmark */ = 60F858D111CB20550094A7A4 /* PBXTextBookmark */;
-			60F858DD11CB21170094A7A4 /* PBXTextBookmark */ = 60F858DD11CB21170094A7A4 /* PBXTextBookmark */;
 			60F858E311CB21450094A7A4 /* PBXTextBookmark */ = 60F858E311CB21450094A7A4 /* PBXTextBookmark */;
 			60F858EA11CB21FE0094A7A4 /* PBXTextBookmark */ = 60F858EA11CB21FE0094A7A4 /* PBXTextBookmark */;
 			60F858EB11CB21FE0094A7A4 /* PBXTextBookmark */ = 60F858EB11CB21FE0094A7A4 /* PBXTextBookmark */;
@@ -156,6 +156,30 @@
 		rType = 0;
 		vrLen = 495;
 		vrLoc = 0;
+	};
+	608BD54311CB25F2007CE542 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 60D96DB511CB23F700B0A36D /* icon_29.png */;
+	};
+	608BD54411CB25F2007CE542 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* OrbitClockViewController.h */;
+		name = "OrbitClockViewController.h: 39";
+		rLen = 0;
+		rLoc = 741;
+		rType = 0;
+		vrLen = 1128;
+		vrLoc = 443;
+	};
+	608BD55A11CB2783007CE542 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* OrbitClockViewController.m */;
+		name = "OrbitClockViewController.m: 96";
+		rLen = 0;
+		rLoc = 3113;
+		rType = 0;
+		vrLen = 1150;
+		vrLoc = 2499;
 	};
 	608F385011C97167000168DC /* InfoViewController.h */ = {
 		uiCtxt = {
@@ -269,15 +293,7 @@
 		);
 		name = "/Users/awright418/Sites/xcode.acwrightdesign.com/orbitclock.acwrightdesign.com/OrbitClock-Info.plist";
 		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	60D96DC111CB242800B0A36D /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 60D96DB511CB23F700B0A36D /* icon_29.png */;
-	};
-	60D96DC211CB242800B0A36D /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 60D96DB511CB23F700B0A36D /* icon_29.png */;
+		rLoc = 9223372036854775808;
 	};
 	60F858D111CB20550094A7A4 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -288,16 +304,6 @@
 		rType = 0;
 		vrLen = 910;
 		vrLoc = 0;
-	};
-	60F858DD11CB21170094A7A4 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF60DDB3853001CB0EB /* OrbitClockViewController.h */;
-		name = "OrbitClockViewController.h: 39";
-		rLen = 0;
-		rLoc = 741;
-		rType = 0;
-		vrLen = 1128;
-		vrLoc = 443;
 	};
 	60F858E311CB21450094A7A4 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -324,7 +330,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* OrbitClockViewController.m */;
 		name = "OrbitClockViewController.m: 167";
 		rLen = 0;
-		rLoc = 5196;
+		rLoc = 5156;
 		rType = 0;
 		vrLen = 1363;
 		vrLoc = 0;
