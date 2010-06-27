@@ -1,8 +1,8 @@
 //
 //  Orbiter.h
-//  OrbitClock
+//  Orbit Clock
 //
-//  Created by Aaron Wright on 6/6/10.
+//  Created by Aaron Wright on 6/27/10.
 //  Copyright 2010 A.C. Wright Design. All rights reserved.
 //
 

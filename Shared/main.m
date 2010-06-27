@@ -1,8 +1,8 @@
 //
 //  main.m
-//  OrbitClock
+//  Orbit Clock
 //
-//  Created by Aaron Wright on 6/6/10.
+//  Created by Aaron Wright on 6/27/10.
 //  Copyright A.C. Wright Design 2010. All rights reserved.
 //
 

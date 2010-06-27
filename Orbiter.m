@@ -1,8 +1,8 @@
 //
 //  Orbiter.m
-//  OrbitClock
+//  Orbit Clock
 //
-//  Created by Aaron Wright on 6/6/10.
+//  Created by Aaron Wright on 6/27/10.
 //  Copyright 2010 A.C. Wright Design. All rights reserved.
 //
 
@@ -38,15 +38,15 @@
 	// Set the dot color
 	CGContextSetStrokeColorWithColor(contextRef, self.strokeColor.CGColor);
 	CGContextSetFillColorWithColor(contextRef, self.fillColor.CGColor);
-
+	
 	CGContextFillEllipseInRect(contextRef, self.bounds);
-
+	
 	self.center = self.calculateCenter;
 	
 }
 
 - (CGPoint)calculateCenter {
-
+	
 	return CGPointMake(self.orbitCenter.x + (self.orbitRadius * cos(self.angle)), self.orbitCenter.y + (self.orbitRadius * sin(self.angle)));
 	
 }
