@@ -1,14 +1,14 @@
 //
-//  Orbiter.m
+//  OrbiterView.m
 //  Orbit Clock
 //
 //  Created by Aaron Wright on 6/27/10.
 //  Copyright 2010 A.C. Wright Design. All rights reserved.
 //
 
-#import "Orbiter.h"
+#import "OrbiterView.h"
 
-@implementation Orbiter
+@implementation OrbiterView
 
 @synthesize strokeColor;
 @synthesize fillColor;
@@ -29,8 +29,6 @@
 	return self;
 }
 
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
 	
 	CGContextRef contextRef = UIGraphicsGetCurrentContext();

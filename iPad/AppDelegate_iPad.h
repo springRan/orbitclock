@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class Orbit_ClockViewController_iPad;
+
 @interface AppDelegate_iPad : NSObject <UIApplicationDelegate> {
-    UIWindow *window;
+    IBOutlet UIWindow *window;
+    IBOutlet Orbit_ClockViewController_iPad *ipad_view_controller;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) IBOutlet Orbit_ClockViewController_iPad *ipad_view_controller;
 
 @end
 

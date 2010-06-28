@@ -1,5 +1,5 @@
 //
-//  Orbiter.h
+//  OrbiterView.h
 //  Orbit Clock
 //
 //  Created by Aaron Wright on 6/27/10.
@@ -10,12 +10,12 @@
 
 #define DefaultStrokeColor		[UIColor whiteColor]
 #define DefaultFillColor		[UIColor whiteColor]
-#define DefaultCenter			CGPointMake(384,502)
-#define DefaultOrbitCenter		CGPointMake(384,502)
+#define DefaultCenter			CGPointMake(0,0)
+#define DefaultOrbitCenter		CGPointMake(0,0)
 #define DefaultOrbitRadius		0.0
-#define DefaultAngle				M_PI
+#define DefaultAngle			M_PI
 
-@interface Orbiter : UIView {
+@interface OrbiterView : UIView {
 	UIColor *strokeColor;
 	UIColor *fillColor;
 	CGPoint orbitCenter;

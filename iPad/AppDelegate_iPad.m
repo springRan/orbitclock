@@ -7,20 +7,21 @@
 //
 
 #import "AppDelegate_iPad.h"
+#import "Orbit_ClockViewController_iPad.h"
 
 @implementation AppDelegate_iPad
 
 @synthesize window;
-
+@synthesize ipad_view_controller;
 
 #pragma mark -
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 	
-    // Override point for customization after application launch.
-	
-    [window makeKeyAndVisible];
+	//[window backgroundColor:[UIColor clearColor]];
+	[window addSubview:ipad_view_controller.view];
+	[window makeKeyAndVisible];
 	
 	return YES;
 }
@@ -59,6 +60,7 @@
 
 
 - (void)dealloc {
+	[ipad_view_controller release];
     [window release];
     [super dealloc];
 }

@@ -7,20 +7,21 @@
 //
 
 #import "AppDelegate_iPhone.h"
+#import "Orbit_ClockViewController_iPhone.h"
 
 @implementation AppDelegate_iPhone
 
 @synthesize window;
-
+@synthesize iphone_view_controller;
 
 #pragma mark -
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-	
-    // Override point for customization after application launch.
-	
-    [window makeKeyAndVisible];
+
+	//[window backgroundColor:[UIColor clearColor]];
+	[window addSubview:iphone_view_controller.view];
+	[window makeKeyAndVisible];
 	
 	return YES;
 }
@@ -76,6 +77,7 @@
 
 - (void)dealloc {
     [window release];
+	[iphone_view_controller release];
     [super dealloc];
 }
 
