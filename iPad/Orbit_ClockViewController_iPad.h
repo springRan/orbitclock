@@ -7,25 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "InfoViewController.h"
+#import "OptionsViewController.h"
 #import "ClockViewController.h"
 
-@interface Orbit_ClockViewController_iPad : UIViewController <UIPopoverControllerDelegate, InfoViewControllerDelegate> {
-	
+#define CLOCK_SIZE CGSizeMake(768.0, 768.0)
+#define VIEW_CENTER_PORTRAIT CGPointMake(384.0, 502.0)
+#define VIEW_CENTER_LANDSCAPE CGPointMake(374.0, 512.0)
+
+@interface Orbit_ClockViewController_iPad : UIViewController <OptionsViewControllerDelegate> {
 	NSUserDefaults *prefs;
-	InfoViewController *infoView;
-	UIPopoverController *infoViewPopover;
-	ClockViewController *clockView;
-	IBOutlet UIButton *info_button;
-	
+	OptionsViewController *options_view;
+	ClockViewController *clock_view;
+	UIPopoverController *options_view_popover;
+	IBOutlet UIButton *options_button;
 }
 
 @property (nonatomic, assign) NSUserDefaults *prefs;
-@property (nonatomic, retain) InfoViewController *infoView;
-@property (nonatomic, retain) UIPopoverController *infoViewPopover;
-@property (nonatomic, retain) ClockViewController *clockView;
-@property (nonatomic, retain) IBOutlet UIButton *info_button;
+@property (nonatomic, retain) OptionsViewController *options_view;
+@property (nonatomic, retain) ClockViewController *clock_view;
+@property (nonatomic, retain) UIPopoverController *options_view_popover;
+@property (nonatomic, retain) IBOutlet UIButton *options_button;
 
-- (IBAction)showInfo:(id)sender;
+- (IBAction)showOptions:(id)sender;
 
 @end

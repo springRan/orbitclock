@@ -28,18 +28,18 @@
 		
 		self.backgroundColor = [UIColor clearColor];
 		
-		self.one = [[OrbiterView alloc] initWithFrame:CGRectMake(0, 0, 8, 8)];
-		self.two = [[OrbiterView alloc] initWithFrame:CGRectMake(0, 0, 8, 8)];
-		self.three = [[OrbiterView alloc] initWithFrame:CGRectMake(0, 0, 16, 16)];
-		self.four = [[OrbiterView alloc] initWithFrame:CGRectMake(0, 0, 8, 8)];
-		self.five = [[OrbiterView alloc] initWithFrame:CGRectMake(0, 0, 8, 8)];
-		self.six = [[OrbiterView alloc] initWithFrame:CGRectMake(0, 0, 16, 16)];
-		self.seven = [[OrbiterView alloc] initWithFrame:CGRectMake(0, 0, 8, 8)];
-		self.eight = [[OrbiterView alloc] initWithFrame:CGRectMake(0, 0, 8, 8)];
-		self.nine = [[OrbiterView alloc] initWithFrame:CGRectMake(0, 0, 16, 16)];
-		self.ten = [[OrbiterView alloc] initWithFrame:CGRectMake(0, 0, 8, 8)];
-		self.eleven = [[OrbiterView alloc] initWithFrame:CGRectMake(0, 0, 8, 8)];
-		self.twelve = [[OrbiterView alloc] initWithFrame:CGRectMake(0, 0, 16, 16)];
+		self.one = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 8.0, 8.0)];
+		self.two = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 8.0, 8.0)];
+		self.three = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 16.0, 16.0)];
+		self.four = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 8.0, 8.0)];
+		self.five = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 8.0, 8.0)];
+		self.six = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 16.0, 16.0)];
+		self.seven = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 8.0, 8.0)];
+		self.eight = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 8.0, 8.0)];
+		self.nine = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 16.0, 16.0)];
+		self.ten = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 8.0, 8.0)];
+		self.eleven = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 8.0, 8.0)];
+		self.twelve = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 16.0, 16.0)];
 		
 		self.one.fillColor = [UIColor lightGrayColor];
 		self.two.fillColor = [UIColor lightGrayColor];
@@ -73,31 +73,21 @@
 
 - (void)drawRect:(CGRect)rect {
 	
-	self.one.orbitCenter = self.center;
-	self.two.orbitCenter = self.center;
-	self.three.orbitCenter = self.center;
-	self.four.orbitCenter = self.center;
-	self.five.orbitCenter = self.center;
-	self.six.orbitCenter = self.center;
-	self.seven.orbitCenter = self.center;
-	self.eight.orbitCenter = self.center;
-	self.nine.orbitCenter = self.center;
-	self.ten.orbitCenter = self.center;
-	self.eleven.orbitCenter = self.center;
-	self.twelve.orbitCenter = self.center;
+	//NSLog(@"Center: %@", NSStringFromCGPoint(self.center));
+	//NSLog(@"Size: %@", NSStringFromCGSize(self.frame.size));
 	
-	self.one.orbitRadius = self.frame.size.width / 2;
-	self.two.orbitRadius = self.frame.size.width / 2;
-	self.three.orbitRadius = self.frame.size.width / 2;
-	self.four.orbitRadius = self.frame.size.width / 2;
-	self.five.orbitRadius = self.frame.size.width / 2;
-	self.six.orbitRadius = self.frame.size.width / 2;
-	self.seven.orbitRadius = self.frame.size.width / 2;
-	self.eight.orbitRadius = self.frame.size.width / 2;
-	self.nine.orbitRadius = self.frame.size.width / 2;
-	self.ten.orbitRadius = self.frame.size.width / 2;
-	self.eleven.orbitRadius = self.frame.size.width / 2;
-	self.twelve.orbitRadius = self.frame.size.width / 2;
+	self.one.orbitRadius = (self.frame.size.width - 32.0) / 2;
+	self.two.orbitRadius = (self.frame.size.width - 32.0) / 2;
+	self.three.orbitRadius = (self.frame.size.width - 32.0) / 2;
+	self.four.orbitRadius = (self.frame.size.width - 32.0) / 2;
+	self.five.orbitRadius = (self.frame.size.width - 32.0) / 2;
+	self.six.orbitRadius = (self.frame.size.width - 32.0) / 2;
+	self.seven.orbitRadius = (self.frame.size.width - 32.0) / 2;
+	self.eight.orbitRadius = (self.frame.size.width - 32.0) / 2;
+	self.nine.orbitRadius = (self.frame.size.width - 32.0) / 2;
+	self.ten.orbitRadius = (self.frame.size.width - 32.0) / 2;
+	self.eleven.orbitRadius = (self.frame.size.width - 32.0) / 2;
+	self.twelve.orbitRadius = (self.frame.size.width - 32.0) / 2;
 	
 	self.one.angle = M_PI / 3;
 	self.two.angle = M_PI / 6;
@@ -112,6 +102,27 @@
 	self.eleven.angle = (2 * M_PI) / 3;
 	self.twelve.angle = M_PI / 2;
 	
+	self.one.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
+	self.two.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
+	self.three.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
+	self.four.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
+	self.five.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
+	self.six.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
+	self.seven.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
+	self.eight.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
+	self.nine.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
+	self.ten.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
+	self.eleven.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
+	self.twelve.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
+	
+}
+
+- (void)showIndicators:(BOOL)visible {
+	
+}
+
+- (void)showCentiseconds:(BOOL)visible {
+
 }
 
 - (void)dealloc {

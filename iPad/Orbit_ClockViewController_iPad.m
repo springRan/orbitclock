@@ -1,4 +1,4 @@
-    //
+//
 //  Orbit_ClockViewController_iPad.m
 //  Orbit Clock
 //
@@ -10,50 +10,51 @@
 
 @implementation Orbit_ClockViewController_iPad
 
-@synthesize infoView;
-@synthesize infoViewPopover;
-
-@synthesize clockView;
-
-@synthesize info_button;
-
 @synthesize prefs;
+@synthesize options_view;
+@synthesize clock_view;
+@synthesize options_view_popover;
+@synthesize options_button;
 
-- (IBAction)showInfo:(id)sender {
-	if (self.infoView == nil) {
-		self.infoView = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:[NSBundle mainBundle]];
-		self.infoView.delegate = self;
-		self.infoView.indicatorsVisible = [self.prefs integerForKey:@"indicatorsVisible"];
-		self.infoView.centisecondsVisible = [self.prefs integerForKey:@"centisecondsVisible"];
-		self.infoViewPopover = [[[UIPopoverController alloc] initWithContentViewController:self.infoView] autorelease];
+- (IBAction)showOptions:(id)sender {
+	if (self.options_view == nil) {
+		self.options_view = [[OptionsViewController alloc] initWithNibName:@"OptionsViewController" bundle:[NSBundle mainBundle]];
+		self.options_view.delegate = self;
+		self.options_view.indicators_visible = [self.prefs integerForKey:@"indicators_visible"];
+		self.options_view.centiseconds_visible = [self.prefs integerForKey:@"centiseconds_visible"];
+		self.options_view_popover = [[[UIPopoverController alloc] initWithContentViewController:self.options_view] autorelease];
 	}
-	[self.infoViewPopover presentPopoverFromRect:self.info_button.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+	[self.options_view_popover presentPopoverFromRect:self.options_button.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 }
 
 - (void)indicatorsChanged:(BOOL)value {
-	[self.clockView showIndicators:value];
-	[self.prefs setInteger:value forKey:@"indicatorsVisible"];
+	[self.clock_view showIndicators:value];
+	[self.prefs setInteger:value forKey:@"indicators_visible"];
 }
 
 - (void)centisecondsChanged:(BOOL)value {
-	[self.clockView showCentiseconds:value];
-	[self.prefs setInteger:value forKey:@"centisecondsVisible"];
+	[self.clock_view showCentiseconds:value];
+	[self.prefs setInteger:value forKey:@"centiseconds_visible"];
+}
+
+- (void)optionsViewControllerDidFinish {
+	//Do nothing for iPad!
 }
 
 - (void)viewDidLoad {
 	
     [super viewDidLoad];
+
+	[self.view bringSubviewToFront:self.options_button];
+	
+	self.clock_view = [ClockViewController alloc];
+	self.clock_view.view.frame = CGRectMake(0, 0, CLOCK_SIZE.width, CLOCK_SIZE.height);
+	self.clock_view.view.center = VIEW_CENTER_PORTRAIT;
+	[self.view addSubview:self.clock_view.view];
 	
 	self.prefs = [NSUserDefaults standardUserDefaults];
-	[self.view bringSubviewToFront:self.info_button];
-	
-	self.clockView = [ClockViewController alloc];
-	self.clockView.view.frame = CGRectMake(0, 0, self.view.frame.size.width - 10.0, self.view.frame.size.width - 10.0);
-	self.clockView.view.center = CGPointMake(384.0, 502.0);
-	[self.view addSubview:self.clockView.view];
-	
-	[self indicatorsChanged:[self.prefs integerForKey:@"indicatorsVisible"]];
-	[self centisecondsChanged:[self.prefs integerForKey:@"centisecondsVisible"]];
+	[self indicatorsChanged:[self.prefs integerForKey:@"indicators_visible"]];
+	[self centisecondsChanged:[self.prefs integerForKey:@"centiseconds_visible"]];
 	
 }
 
@@ -64,13 +65,13 @@
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
 	
 	if (toInterfaceOrientation == UIInterfaceOrientationPortrait || toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
-		self.clockView.view.center = CGPointMake(384.0, 502.0);
+		self.clock_view.view.center = VIEW_CENTER_PORTRAIT;
 	}
 	if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft || toInterfaceOrientation == UIInterfaceOrientationLandscapeRight) {
-		self.clockView.view.center = CGPointMake(512.0, 374.0);
+		self.clock_view.view.center = VIEW_CENTER_LANDSCAPE;
 	}
 	
-	[self.clockView.view setNeedsDisplay];
+	[self.clock_view.view setNeedsDisplay];
 	
 }
 
@@ -83,9 +84,9 @@
 }
 
 - (void)dealloc {
-	[self.infoView release];
-	[self.infoViewPopover release];
-	[self.clockView release];
+	[self.options_view release];
+	[self.options_view_popover release];
+	[self.clock_view release];
     [super dealloc];
 }
 

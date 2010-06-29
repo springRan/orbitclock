@@ -11,11 +11,11 @@
 @implementation ClockViewController
 
 - (void)showIndicators:(BOOL)visible {
-	NSLog(@"Show Indicators: %i", visible);
+	[self.view showIndicators:visible];
 }
 
 - (void)showCentiseconds:(BOOL)visible {
-	NSLog(@"Show Centiseconds: %i", visible);
+	[self.view showCentiseconds:visible];
 }
 
 - (void)loadView {

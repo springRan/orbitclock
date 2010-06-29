@@ -15,10 +15,17 @@
 		2860E32E111B888700E27156 /* AppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 2860E32C111B888700E27156 /* AppDelegate_iPad.m */; };
 		2860E32F111B888700E27156 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2860E32D111B888700E27156 /* MainWindow_iPad.xib */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		6097154611D813AD00E69124 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6097154411D813AD00E69124 /* InfoViewController.m */; };
-		6097154711D813AD00E69124 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6097154511D813AD00E69124 /* InfoViewController.xib */; };
+		6097154611D813AD00E69124 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6097154411D813AD00E69124 /* OptionsViewController.m */; };
+		6097154711D813AD00E69124 /* OptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6097154511D813AD00E69124 /* OptionsViewController.xib */; };
 		6097162111D81DF200E69124 /* ClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6097161F11D81DF200E69124 /* ClockViewController.m */; };
 		6097167C11D82CA000E69124 /* ClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6097167B11D82CA000E69124 /* ClockView.m */; };
+		60E5FB7B11D9874200E2F094 /* options_button_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 60E5FB7911D9874200E2F094 /* options_button_default.png */; };
+		60E5FB7C11D9874200E2F094 /* options_button_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 60E5FB7A11D9874200E2F094 /* options_button_selected.png */; };
+		60E5FB8311D9875600E2F094 /* icon_29.png in Resources */ = {isa = PBXBuildFile; fileRef = 60E5FB7F11D9875600E2F094 /* icon_29.png */; };
+		60E5FB8411D9875600E2F094 /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 60E5FB8011D9875600E2F094 /* icon_57.png */; };
+		60E5FB8511D9875600E2F094 /* icon_72.png in Resources */ = {isa = PBXBuildFile; fileRef = 60E5FB8111D9875600E2F094 /* icon_72.png */; };
+		60E5FB8611D9875600E2F094 /* icon_512.png in Resources */ = {isa = PBXBuildFile; fileRef = 60E5FB8211D9875600E2F094 /* icon_512.png */; };
+		60E5FBB311D98A9E00E2F094 /* options_button_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 60E5FBB211D98A9E00E2F094 /* options_button_highlighted.png */; };
 		60EE22DC11D7F55B00E889F5 /* OrbiterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EE22DB11D7F55B00E889F5 /* OrbiterView.m */; };
 		60EE231B11D7F8BA00E889F5 /* Orbit_ClockViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EE231911D7F8BA00E889F5 /* Orbit_ClockViewController_iPad.m */; };
 		60EE231C11D7F8BA00E889F5 /* Orbit_ClockViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60EE231A11D7F8BA00E889F5 /* Orbit_ClockViewController_iPad.xib */; };
@@ -39,13 +46,20 @@
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Shared/main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Orbit_Clock_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Orbit_Clock_Prefix.pch; sourceTree = "<group>"; };
-		6097154311D813AD00E69124 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
-		6097154411D813AD00E69124 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
-		6097154511D813AD00E69124 /* InfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
+		6097154311D813AD00E69124 /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionsViewController.h; path = iPad/OptionsViewController.h; sourceTree = "<group>"; };
+		6097154411D813AD00E69124 /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OptionsViewController.m; path = iPad/OptionsViewController.m; sourceTree = "<group>"; };
+		6097154511D813AD00E69124 /* OptionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = OptionsViewController.xib; path = iPad/OptionsViewController.xib; sourceTree = "<group>"; };
 		6097161E11D81DF200E69124 /* ClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockViewController.h; sourceTree = "<group>"; };
 		6097161F11D81DF200E69124 /* ClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockViewController.m; sourceTree = "<group>"; };
 		6097167A11D82CA000E69124 /* ClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockView.h; sourceTree = "<group>"; };
 		6097167B11D82CA000E69124 /* ClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockView.m; sourceTree = "<group>"; };
+		60E5FB7911D9874200E2F094 /* options_button_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = options_button_default.png; path = ../options_button_default.png; sourceTree = "<group>"; };
+		60E5FB7A11D9874200E2F094 /* options_button_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = options_button_selected.png; path = ../options_button_selected.png; sourceTree = "<group>"; };
+		60E5FB7F11D9875600E2F094 /* icon_29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_29.png; sourceTree = "<group>"; };
+		60E5FB8011D9875600E2F094 /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57.png; sourceTree = "<group>"; };
+		60E5FB8111D9875600E2F094 /* icon_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_72.png; sourceTree = "<group>"; };
+		60E5FB8211D9875600E2F094 /* icon_512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_512.png; sourceTree = "<group>"; };
+		60E5FBB211D98A9E00E2F094 /* options_button_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = options_button_highlighted.png; sourceTree = SOURCE_ROOT; };
 		60EE22DA11D7F55B00E889F5 /* OrbiterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrbiterView.h; sourceTree = "<group>"; };
 		60EE22DB11D7F55B00E889F5 /* OrbiterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrbiterView.m; sourceTree = "<group>"; };
 		60EE231811D7F8BA00E889F5 /* Orbit_ClockViewController_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Orbit_ClockViewController_iPad.h; sourceTree = "<group>"; };
@@ -97,13 +111,13 @@
 			children = (
 				2860E32B111B888700E27156 /* AppDelegate_iPad.h */,
 				2860E32C111B888700E27156 /* AppDelegate_iPad.m */,
-				6097154311D813AD00E69124 /* InfoViewController.h */,
-				6097154411D813AD00E69124 /* InfoViewController.m */,
-				6097154511D813AD00E69124 /* InfoViewController.xib */,
 				60EE231811D7F8BA00E889F5 /* Orbit_ClockViewController_iPad.h */,
 				60EE231911D7F8BA00E889F5 /* Orbit_ClockViewController_iPad.m */,
 				60EE231A11D7F8BA00E889F5 /* Orbit_ClockViewController_iPad.xib */,
 				2860E32D111B888700E27156 /* MainWindow_iPad.xib */,
+				60E5FB7911D9874200E2F094 /* options_button_default.png */,
+				60E5FBB211D98A9E00E2F094 /* options_button_highlighted.png */,
+				60E5FB7A11D9874200E2F094 /* options_button_selected.png */,
 			);
 			path = iPad;
 			sourceTree = "<group>";
@@ -111,9 +125,16 @@
 		28EEBF621118D79A00187D67 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				60E5FB7F11D9875600E2F094 /* icon_29.png */,
+				60E5FB8011D9875600E2F094 /* icon_57.png */,
+				60E5FB8111D9875600E2F094 /* icon_72.png */,
+				60E5FB8211D9875600E2F094 /* icon_512.png */,
 				8D1107310486CEB800E47090 /* Orbit_Clock-Info.plist */,
 				60EE22DA11D7F55B00E889F5 /* OrbiterView.h */,
 				60EE22DB11D7F55B00E889F5 /* OrbiterView.m */,
+				6097154311D813AD00E69124 /* OptionsViewController.h */,
+				6097154411D813AD00E69124 /* OptionsViewController.m */,
+				6097154511D813AD00E69124 /* OptionsViewController.xib */,
 				6097161E11D81DF200E69124 /* ClockViewController.h */,
 				6097161F11D81DF200E69124 /* ClockViewController.m */,
 				6097167A11D82CA000E69124 /* ClockView.h */,
@@ -200,7 +221,14 @@
 				2860E32F111B888700E27156 /* MainWindow_iPad.xib in Resources */,
 				60EE231C11D7F8BA00E889F5 /* Orbit_ClockViewController_iPad.xib in Resources */,
 				60EE232111D7F8D100E889F5 /* Orbit_ClockViewController_iPhone.xib in Resources */,
-				6097154711D813AD00E69124 /* InfoViewController.xib in Resources */,
+				6097154711D813AD00E69124 /* OptionsViewController.xib in Resources */,
+				60E5FB7B11D9874200E2F094 /* options_button_default.png in Resources */,
+				60E5FB7C11D9874200E2F094 /* options_button_selected.png in Resources */,
+				60E5FB8311D9875600E2F094 /* icon_29.png in Resources */,
+				60E5FB8411D9875600E2F094 /* icon_57.png in Resources */,
+				60E5FB8511D9875600E2F094 /* icon_72.png in Resources */,
+				60E5FB8611D9875600E2F094 /* icon_512.png in Resources */,
+				60E5FBB311D98A9E00E2F094 /* options_button_highlighted.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +245,7 @@
 				60EE22DC11D7F55B00E889F5 /* OrbiterView.m in Sources */,
 				60EE231B11D7F8BA00E889F5 /* Orbit_ClockViewController_iPad.m in Sources */,
 				60EE232011D7F8D100E889F5 /* Orbit_ClockViewController_iPhone.m in Sources */,
-				6097154611D813AD00E69124 /* InfoViewController.m in Sources */,
+				6097154611D813AD00E69124 /* OptionsViewController.m in Sources */,
 				6097162111D81DF200E69124 /* ClockViewController.m in Sources */,
 				6097167C11D82CA000E69124 /* ClockView.m in Sources */,
 			);

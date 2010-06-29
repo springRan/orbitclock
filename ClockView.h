@@ -10,7 +10,7 @@
 #import "OrbiterView.h"
 
 @interface ClockView : UIView {
-
+	
 	OrbiterView *one;
 	OrbiterView *two;
 	OrbiterView *three;
@@ -38,5 +38,8 @@
 @property (nonatomic, retain) OrbiterView *ten;
 @property (nonatomic, retain) OrbiterView *eleven;
 @property (nonatomic, retain) OrbiterView *twelve;
+
+- (void)showIndicators:(BOOL)visible;
+- (void)showCentiseconds:(BOOL)visible;
 
 @end
