@@ -38,7 +38,7 @@
 }
 
 - (void)optionsViewControllerDidFinish {
-	//Do nothing for iPad!
+	[self.options_view_popover dismissPopoverAnimated:YES];
 }
 
 - (void)viewDidLoad {

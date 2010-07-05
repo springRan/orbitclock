@@ -16,7 +16,8 @@
 
 @end
 
-@interface OptionsViewController : UIViewController {
+@interface OptionsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+	IBOutlet UIButton *link;
 	IBOutlet UISwitch *indicator_switch;
 	IBOutlet UISwitch *centisecond_switch;
 	int indicators_visible;
@@ -24,13 +25,16 @@
 	id delegate;
 }
 
+@property (nonatomic, retain) IBOutlet UIButton *link;
 @property (nonatomic, retain) IBOutlet UISwitch *indicator_switch;
 @property (nonatomic, retain) IBOutlet UISwitch *centisecond_switch;
 @property (nonatomic, assign) int indicators_visible;
 @property (nonatomic, assign) int centiseconds_visible;
 @property (nonatomic, assign) id <OptionsViewControllerDelegate> delegate;
 
+- (IBAction)linkToHomePage:(id)sender;
 - (IBAction)toggleIndicators:(id)sender;
 - (IBAction)toggleCentiseconds:(id)sender;
+- (IBAction)done:(id)sender;
 
 @end

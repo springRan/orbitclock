@@ -11,11 +11,11 @@
 @implementation ClockViewController
 
 - (void)showIndicators:(BOOL)visible {
-	[self.view showIndicators:visible];
+	[(ClockView *)self.view showIndicators:visible];
 }
 
 - (void)showCentiseconds:(BOOL)visible {
-	[self.view showCentiseconds:visible];
+	[(ClockView *)self.view showCentiseconds:visible];
 }
 
 - (void)loadView {
@@ -25,14 +25,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
