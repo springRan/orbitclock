@@ -13,7 +13,9 @@
 
 }
 
-- (void)showIndicators:(BOOL)visible;
+- (void)showCenterIndicator:(BOOL)visible;
+- (void)showHourIndicators:(BOOL)visible;
+- (void)showSeconds:(BOOL)visible;
 - (void)showCentiseconds:(BOOL)visible;
 
 @end

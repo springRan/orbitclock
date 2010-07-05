@@ -10,8 +10,16 @@
 
 @implementation ClockViewController
 
-- (void)showIndicators:(BOOL)visible {
-	[(ClockView *)self.view showIndicators:visible];
+- (void)showCenterIndicator:(BOOL)visible {
+	[(ClockView *)self.view showCenterIndicator:visible];
+}
+
+- (void)showHourIndicators:(BOOL)visible {
+	[(ClockView *)self.view showHourIndicators:visible];
+}
+
+- (void)showSeconds:(BOOL)visible {
+	[(ClockView *)self.view showSeconds:visible];
 }
 
 - (void)showCentiseconds:(BOOL)visible {

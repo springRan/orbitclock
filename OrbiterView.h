@@ -8,27 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+#define DefaultStrokeWidth		0.0
 #define DefaultStrokeColor		[UIColor whiteColor]
 #define DefaultFillColor		[UIColor whiteColor]
-#define DefaultCenter			CGPointMake(0,0)
-#define DefaultOrbitCenter		CGPointMake(0,0)
-#define DefaultOrbitRadius		0.0
-#define DefaultAngle			M_PI
 
 @interface OrbiterView : UIView {
-	UIColor *strokeColor;
-	UIColor *fillColor;
-	CGPoint orbitCenter;
-	double orbitRadius;
-	double angle;
+	double stroke_width;
+	UIColor *stroke_color;
+	UIColor *fill_color;
 }
 
-@property (nonatomic, retain) UIColor *strokeColor;
-@property (nonatomic, retain) UIColor *fillColor;
-@property (readwrite, assign) CGPoint orbitCenter;
-@property (readwrite, assign) double orbitRadius;
-@property (readwrite, assign) double angle;
-
-- (CGPoint)calculateCenter;
+@property (readwrite, assign) double stroke_width;
+@property (nonatomic, retain) UIColor *stroke_color;
+@property (nonatomic, retain) UIColor *fill_color;
 
 @end

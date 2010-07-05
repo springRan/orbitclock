@@ -10,48 +10,44 @@
 
 @implementation OrbiterView
 
-@synthesize strokeColor;
-@synthesize fillColor;
-@synthesize orbitCenter;
-@synthesize orbitRadius;
-@synthesize angle;
+@synthesize stroke_width;
+@synthesize stroke_color;
+@synthesize fill_color;
 
 - (id)initWithFrame:(CGRect)frame {
 	if ((self = [super initWithFrame:frame])) {
+		
 		self.backgroundColor = [UIColor clearColor];
-		self.strokeColor = DefaultStrokeColor;
-		self.fillColor = DefaultFillColor;
-		self.orbitCenter = DefaultOrbitCenter;
-		self.orbitRadius = DefaultOrbitRadius;
-		self.angle = DefaultAngle;
-		self.center = DefaultCenter;
+		
+		self.stroke_width = DefaultStrokeWidth;
+		self.stroke_color = DefaultStrokeColor;
+		self.fill_color = DefaultFillColor;
+		
 	}
 	return self;
 }
 
 - (void)drawRect:(CGRect)rect {
 	
-	CGContextRef contextRef = UIGraphicsGetCurrentContext();
+	CGContextRef context = UIGraphicsGetCurrentContext();
 	
-	// Set the dot color
-	CGContextSetStrokeColorWithColor(contextRef, self.strokeColor.CGColor);
-	CGContextSetFillColorWithColor(contextRef, self.fillColor.CGColor);
+	CGContextSetLineWidth(context, self.stroke_width);
+	CGContextSetStrokeColorWithColor(context, self.stroke_color.CGColor);
+	CGContextSetFillColorWithColor(context, self.fill_color.CGColor);
 	
-	CGContextFillEllipseInRect(contextRef, self.bounds);
-	
-	self.center = self.calculateCenter;
-	
-}
-
-- (CGPoint)calculateCenter {
-	
-	return CGPointMake(self.orbitCenter.x + (self.orbitRadius * cos(self.angle)), self.orbitCenter.y + (self.orbitRadius * sin(self.angle)));
+	CGContextFillEllipseInRect(context, self.bounds);
+	CGContextStrokeEllipseInRect(context, CGRectMake(
+		self.bounds.origin.x + (self.stroke_width / 2.0), 
+		self.bounds.origin.y + (self.stroke_width / 2.0), 
+		self.bounds.size.width - self.stroke_width, 
+		self.bounds.size.height - self.stroke_width
+	));
 	
 }
 
 - (void)dealloc {
-	[strokeColor release];
-	[fillColor release];
+	[stroke_color release];
+	[fill_color release];
 	[super dealloc];
 }
 

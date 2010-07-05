@@ -11,9 +11,13 @@
 @implementation OptionsViewController
 
 @synthesize link;
-@synthesize indicator_switch;
-@synthesize centisecond_switch;
-@synthesize indicators_visible;
+@synthesize center_indicator_switch;
+@synthesize hour_indicators_switch;
+@synthesize seconds_switch;
+@synthesize centiseconds_switch;
+@synthesize center_indicator_visible;
+@synthesize hour_indicators_visible;
+@synthesize seconds_visible;
 @synthesize centiseconds_visible;
 @synthesize delegate;
 
@@ -21,14 +25,24 @@
 	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.acwrightdesign.com"]];
 }
 
-- (IBAction)toggleIndicators:(id)sender {
-	[self.delegate indicatorsChanged:self.indicator_switch.on];
-	self.indicators_visible = self.indicator_switch.on;
+- (IBAction)showCenterIndicator:(id)sender {
+	[self.delegate showCenterIndicator:(BOOL)self.center_indicator_switch.on];
+	self.center_indicator_visible = (BOOL)self.center_indicator_switch.on;
 }
 
-- (IBAction)toggleCentiseconds:(id)sender {
-	[self.delegate centisecondsChanged:self.centisecond_switch.on];
-	self.centiseconds_visible = self.centisecond_switch.on;
+- (IBAction)showHourIndicators:(id)sender {
+	[self.delegate showHourIndicators:(BOOL)self.hour_indicators_switch.on];
+	self.hour_indicators_visible = (BOOL)self.hour_indicators_switch.on;
+}
+
+- (IBAction)showSeconds:(id)sender {
+	[self.delegate showSeconds:(BOOL)self.seconds_switch.on];
+	self.seconds_visible = (BOOL)self.seconds_switch.on;
+}
+
+- (IBAction)showCentiseconds:(id)sender {
+	[self.delegate showCentiseconds:(BOOL)self.centiseconds_switch.on];
+	self.centiseconds_visible = (BOOL)self.centiseconds_switch.on;
 }
 
 - (IBAction)done:(id)sender {
@@ -40,14 +54,20 @@
 	
 	self.contentSizeForViewInPopover = CGSizeMake(320.0, 480.0);
 	
-	self.indicator_switch = [[UISwitch alloc] initWithFrame:CGRectMake(207.0, 10.0, 180.0, 56.0)];
-	self.centisecond_switch = [[UISwitch alloc] initWithFrame:CGRectMake(207.0, 10.0, 180.0, 56.0)];
+	self.center_indicator_switch = [[UISwitch alloc] initWithFrame:CGRectMake(207.0, 10.0, 180.0, 56.0)];
+	self.hour_indicators_switch = [[UISwitch alloc] initWithFrame:CGRectMake(207.0, 10.0, 180.0, 56.0)];
+	self.seconds_switch = [[UISwitch alloc] initWithFrame:CGRectMake(207.0, 10.0, 180.0, 56.0)];
+	self.centiseconds_switch = [[UISwitch alloc] initWithFrame:CGRectMake(207.0, 10.0, 180.0, 56.0)];
 	
-	[self.indicator_switch addTarget:self action:@selector(toggleIndicators:) forControlEvents:UIControlEventValueChanged];
-	[self.centisecond_switch addTarget:self action:@selector(toggleCentiseconds:) forControlEvents:UIControlEventValueChanged];
+	[self.center_indicator_switch addTarget:self action:@selector(showCenterIndicator:) forControlEvents:UIControlEventValueChanged];
+	[self.hour_indicators_switch addTarget:self action:@selector(showHourIndicators:) forControlEvents:UIControlEventValueChanged];
+	[self.seconds_switch addTarget:self action:@selector(showSeconds:) forControlEvents:UIControlEventValueChanged];
+	[self.centiseconds_switch addTarget:self action:@selector(showCentiseconds:) forControlEvents:UIControlEventValueChanged];
 	
-	self.indicator_switch.on = self.indicators_visible;
-	self.centisecond_switch.on = self.centiseconds_visible;
+	self.center_indicator_switch.on = (int)self.center_indicator_visible;
+	self.hour_indicators_switch.on = (int)self.hour_indicators_visible;
+	self.seconds_switch.on = self.seconds_visible;
+	self.centiseconds_switch.on = self.centiseconds_visible;
 	
 }
 
@@ -64,8 +84,10 @@
 }
 
 - (void)dealloc {
-	[self.indicator_switch release];
-	[self.centisecond_switch release];
+	[self.center_indicator_switch release];
+	[self.hour_indicators_switch release];
+	[self.seconds_switch release];
+	[self.centiseconds_switch release];
 	[super dealloc];
 }
 
@@ -78,7 +100,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section {
-	return 1;
+	return 2;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -87,10 +109,10 @@
 	
 	switch (section) {
 		case 0:
-			label = @"Clock Face";
+			label = @"Indicators";
 			break;
 		case 1:
-			label = @"Clock Hands";
+			label = @"Hands";
 			break;
 		default:
 			break;
@@ -109,12 +131,37 @@
 		[cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     
-	if (indexPath.section == 0) {
-		cell.textLabel.text = @"Show Indicators";
-		[cell addSubview:self.indicator_switch];
-	} else {
-		cell.textLabel.text = @"Show Centiseconds";
-		[cell addSubview:self.centisecond_switch];
+	switch (indexPath.section) {
+		case 0:
+			switch (indexPath.row) {
+				case 0:
+					cell.textLabel.text = @"Hours";
+					[cell addSubview:self.hour_indicators_switch];
+					break;
+				case 1:
+					cell.textLabel.text = @"Center";
+					[cell addSubview:self.center_indicator_switch];
+					break;
+				default:
+					break;
+			}
+			break;
+		case 1:
+			switch (indexPath.row) {
+				case 0:
+					cell.textLabel.text = @"Seconds";
+					[cell addSubview:self.seconds_switch];
+					break;
+				case 1:
+					cell.textLabel.text = @"Centiseconds";
+					[cell addSubview:self.centiseconds_switch];
+					break;
+				default:
+					break;
+			}
+			break;
+		default:
+			break;
 	}
 	
     return cell;
