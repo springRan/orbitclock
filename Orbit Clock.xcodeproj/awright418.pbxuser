@@ -69,36 +69,37 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 300046783;
-			PBXWorkspaceStateSaveDate = 300046783;
+			PBXPerProjectTemplateStateSaveDate = 300170464;
+			PBXWorkspaceStateSaveDate = 300170464;
 		};
 		perUserProjectItems = {
-			603E6E3811DDEEDE006A4906 /* PBXBookmark */ = 603E6E3811DDEEDE006A4906 /* PBXBookmark */;
-			603E6E3911DDEEDE006A4906 /* PBXBookmark */ = 603E6E3911DDEEDE006A4906 /* PBXBookmark */;
-			603E6E4F11DDEF97006A4906 /* PBXBookmark */ = 603E6E4F11DDEF97006A4906 /* PBXBookmark */;
-			604EE82111E27366008A6537 /* PBXBookmark */ = 604EE82111E27366008A6537 /* PBXBookmark */;
-			604EE89D11E29259008A6537 /* PBXTextBookmark */ = 604EE89D11E29259008A6537 /* PBXTextBookmark */;
-			604EE89F11E29259008A6537 /* PBXTextBookmark */ = 604EE89F11E29259008A6537 /* PBXTextBookmark */;
-			604EE8A411E29259008A6537 /* PBXTextBookmark */ = 604EE8A411E29259008A6537 /* PBXTextBookmark */;
-			604EE8A711E29259008A6537 /* PBXTextBookmark */ = 604EE8A711E29259008A6537 /* PBXTextBookmark */;
-			604EE8A811E29259008A6537 /* PBXTextBookmark */ = 604EE8A811E29259008A6537 /* PBXTextBookmark */;
-			604EE8C311E295E2008A6537 /* PBXTextBookmark */ = 604EE8C311E295E2008A6537 /* PBXTextBookmark */;
-			604EE8C411E295E2008A6537 /* PBXTextBookmark */ = 604EE8C411E295E2008A6537 /* PBXTextBookmark */;
-			604EE8C511E295E2008A6537 /* PBXTextBookmark */ = 604EE8C511E295E2008A6537 /* PBXTextBookmark */;
-			604EE8C611E295E2008A6537 /* PBXTextBookmark */ = 604EE8C611E295E2008A6537 /* PBXTextBookmark */;
-			604EE8C711E295E2008A6537 /* PBXTextBookmark */ = 604EE8C711E295E2008A6537 /* PBXTextBookmark */;
-			604EE8C811E295E2008A6537 /* PBXTextBookmark */ = 604EE8C811E295E2008A6537 /* PBXTextBookmark */;
-			604EE8C911E295E2008A6537 /* PBXTextBookmark */ = 604EE8C911E295E2008A6537 /* PBXTextBookmark */;
-			604EE8CA11E295E2008A6537 /* PBXTextBookmark */ = 604EE8CA11E295E2008A6537 /* PBXTextBookmark */;
-			604EE8D711E29656008A6537 /* PBXTextBookmark */ = 604EE8D711E29656008A6537 /* PBXTextBookmark */;
-			6068EFA011E1946900A3F740 /* PlistBookmark */ = 6068EFA011E1946900A3F740 /* PlistBookmark */;
-			60DB870711E1C1110035773F /* PBXTextBookmark */ = 60DB870711E1C1110035773F /* PBXTextBookmark */;
-			60E5FB4111D97BE400E2F094 /* PBXTextBookmark */ = 60E5FB4111D97BE400E2F094 /* PBXTextBookmark */;
-			60E5FB8911D9876A00E2F094 /* PBXTextBookmark */ = 60E5FB8911D9876A00E2F094 /* PBXTextBookmark */;
-			60E5FB8A11D9876A00E2F094 /* PBXTextBookmark */ = 60E5FB8A11D9876A00E2F094 /* PBXTextBookmark */;
-			60E5FBC111D98D1300E2F094 /* PBXBookmark */ = 60E5FBC111D98D1300E2F094 /* PBXBookmark */;
-			60E5FCE311D9C6DA00E2F094 /* PBXBookmark */ = 60E5FCE311D9C6DA00E2F094 /* PBXBookmark */;
-			60EE22F611D7F62B00E889F5 /* PBXTextBookmark */ = 60EE22F611D7F62B00E889F5 /* PBXTextBookmark */;
+			6017390011E2DA05001894FA = 6017390011E2DA05001894FA /* PBXTextBookmark */;
+			6017390211E2DA05001894FA = 6017390211E2DA05001894FA /* PBXTextBookmark */;
+			6017390311E2DA05001894FA = 6017390311E2DA05001894FA /* PBXTextBookmark */;
+			60173A4B11E2FC36001894FA = 60173A4B11E2FC36001894FA /* PBXTextBookmark */;
+			60173A4C11E2FC36001894FA = 60173A4C11E2FC36001894FA /* PBXTextBookmark */;
+			60173A7111E2FEC8001894FA = 60173A7111E2FEC8001894FA /* PBXTextBookmark */;
+			60173A7211E2FEC8001894FA = 60173A7211E2FEC8001894FA /* PBXTextBookmark */;
+			60173A7311E2FEC8001894FA = 60173A7311E2FEC8001894FA /* PBXTextBookmark */;
+			60173A7411E2FEC8001894FA = 60173A7411E2FEC8001894FA /* PBXTextBookmark */;
+			60173A7511E2FEC8001894FA = 60173A7511E2FEC8001894FA /* PBXTextBookmark */;
+			60173A7B11E2FF25001894FA = 60173A7B11E2FF25001894FA /* PBXTextBookmark */;
+			60173AA511E2FF56001894FA = 60173AA511E2FF56001894FA /* PBXTextBookmark */;
+			603E6E3811DDEEDE006A4906 = 603E6E3811DDEEDE006A4906 /* PBXBookmark */;
+			603E6E3911DDEEDE006A4906 = 603E6E3911DDEEDE006A4906 /* PBXBookmark */;
+			603E6E4F11DDEF97006A4906 = 603E6E4F11DDEF97006A4906 /* PBXBookmark */;
+			604EE82111E27366008A6537 = 604EE82111E27366008A6537 /* PBXBookmark */;
+			604EE89D11E29259008A6537 = 604EE89D11E29259008A6537 /* PBXTextBookmark */;
+			604EE8A411E29259008A6537 = 604EE8A411E29259008A6537 /* PBXTextBookmark */;
+			604EE8A711E29259008A6537 = 604EE8A711E29259008A6537 /* PBXTextBookmark */;
+			6068EFA011E1946900A3F740 = 6068EFA011E1946900A3F740 /* PlistBookmark */;
+			60DB870711E1C1110035773F = 60DB870711E1C1110035773F /* PBXTextBookmark */;
+			60E5FB4111D97BE400E2F094 = 60E5FB4111D97BE400E2F094 /* PBXTextBookmark */;
+			60E5FB8911D9876A00E2F094 = 60E5FB8911D9876A00E2F094 /* PBXTextBookmark */;
+			60E5FB8A11D9876A00E2F094 = 60E5FB8A11D9876A00E2F094 /* PBXTextBookmark */;
+			60E5FBC111D98D1300E2F094 = 60E5FBC111D98D1300E2F094 /* PBXBookmark */;
+			60E5FCE311D9C6DA00E2F094 = 60E5FCE311D9C6DA00E2F094 /* PBXBookmark */;
+			60EE22F611D7F62B00E889F5 = 60EE22F611D7F62B00E889F5 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 60EE22B111D7F2BA00E889F5 /* Source Control */;
 		userBuildSettings = {
@@ -117,6 +118,133 @@
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 191}";
 		};
+	};
+	6017390011E2DA05001894FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6017390111E2DA05001894FA /* CGGeometry.h */;
+		name = "CGGeometry.h: 29";
+		rLen = 16;
+		rLoc = 429;
+		rType = 0;
+		vrLen = 847;
+		vrLoc = 175;
+	};
+	6017390111E2DA05001894FA /* CGGeometry.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = CGGeometry.h;
+		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGGeometry.h;
+		sourceTree = "<absolute>";
+	};
+	6017390211E2DA05001894FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 60EE22DA11D7F55B00E889F5 /* OrbiterView.h */;
+		name = "OrbiterView.h: 15";
+		rLen = 0;
+		rLoc = 312;
+		rType = 0;
+		vrLen = 563;
+		vrLoc = 0;
+	};
+	6017390311E2DA05001894FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 60EE22DB11D7F55B00E889F5 /* OrbiterView.m */;
+		name = "OrbiterView.m: 43";
+		rLen = 0;
+		rLoc = 1137;
+		rType = 0;
+		vrLen = 1070;
+		vrLoc = 169;
+	};
+	60173A4B11E2FC36001894FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 60EE231E11D7F8D100E889F5 /* Orbit_ClockViewController_iPhone.m */;
+		name = "Orbit_ClockViewController_iPhone.m: 61";
+		rLen = 40;
+		rLoc = 1864;
+		rType = 0;
+		vrLen = 1550;
+		vrLoc = 1763;
+	};
+	60173A4C11E2FC36001894FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 60EE231911D7F8BA00E889F5 /* Orbit_ClockViewController_iPad.m */;
+		name = "Orbit_ClockViewController_iPad.m: 63";
+		rLen = 0;
+		rLoc = 2207;
+		rType = 0;
+		vrLen = 1688;
+		vrLoc = 1747;
+	};
+	60173A7111E2FEC8001894FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6097167A11D82CA000E69124 /* ClockView.h */;
+		name = "ClockView.h: 25";
+		rLen = 0;
+		rLoc = 546;
+		rType = 0;
+		vrLen = 1095;
+		vrLoc = 0;
+	};
+	60173A7211E2FEC8001894FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6097167B11D82CA000E69124 /* ClockView.m */;
+		name = "ClockView.m: 121";
+		rLen = 0;
+		rLoc = 4351;
+		rType = 0;
+		vrLen = 1204;
+		vrLoc = 0;
+	};
+	60173A7311E2FEC8001894FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6097161E11D81DF200E69124 /* ClockViewController.h */;
+		name = "ClockViewController.h: 8";
+		rLen = 0;
+		rLoc = 151;
+		rType = 0;
+		vrLen = 678;
+		vrLoc = 0;
+	};
+	60173A7411E2FEC8001894FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6097154411D813AD00E69124 /* OptionsViewController.m */;
+		name = "OptionsViewController.m: 111";
+		rLen = 0;
+		rLoc = 3668;
+		rType = 0;
+		vrLen = 1347;
+		vrLoc = 0;
+	};
+	60173A7511E2FEC8001894FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6097154311D813AD00E69124 /* OptionsViewController.h */;
+		name = "OptionsViewController.h: 16";
+		rLen = 0;
+		rLoc = 389;
+		rType = 0;
+		vrLen = 1586;
+		vrLoc = 153;
+	};
+	60173A7B11E2FF25001894FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6097161F11D81DF200E69124 /* ClockViewController.m */;
+		name = "ClockViewController.m: 25";
+		rLen = 0;
+		rLoc = 429;
+		rType = 0;
+		vrLen = 847;
+		vrLoc = 0;
+	};
+	60173AA511E2FF56001894FA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6097161F11D81DF200E69124 /* ClockViewController.m */;
+		name = "ClockViewController.m: 21";
+		rLen = 0;
+		rLoc = 371;
+		rType = 0;
+		vrLen = 847;
+		vrLoc = 0;
 	};
 	603E6E3811DDEEDE006A4906 /* PBXBookmark */ = {
 		isa = PBXBookmark;
@@ -144,16 +272,6 @@
 		vrLen = 1221;
 		vrLoc = 608;
 	};
-	604EE89F11E29259008A6537 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 60EE22DA11D7F55B00E889F5 /* OrbiterView.h */;
-		name = "OrbiterView.h: 15";
-		rLen = 0;
-		rLoc = 312;
-		rType = 0;
-		vrLen = 563;
-		vrLoc = 0;
-	};
 	604EE8A411E29259008A6537 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 60EE231D11D7F8D100E889F5 /* Orbit_ClockViewController_iPhone.h */;
@@ -174,106 +292,6 @@
 		vrLen = 1048;
 		vrLoc = 0;
 	};
-	604EE8A811E29259008A6537 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 6097154311D813AD00E69124 /* OptionsViewController.h */;
-		name = "OptionsViewController.h: 20";
-		rLen = 0;
-		rLoc = 436;
-		rType = 0;
-		vrLen = 1586;
-		vrLoc = 153;
-	};
-	604EE8C311E295E2008A6537 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 6097161E11D81DF200E69124 /* ClockViewController.h */;
-		name = "ClockViewController.h: 19";
-		rLen = 0;
-		rLoc = 395;
-		rType = 0;
-		vrLen = 421;
-		vrLoc = 0;
-	};
-	604EE8C411E295E2008A6537 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 6097161F11D81DF200E69124 /* ClockViewController.m */;
-		name = "ClockViewController.m: 20";
-		rLen = 0;
-		rLoc = 423;
-		rType = 0;
-		vrLen = 893;
-		vrLoc = 45;
-	};
-	604EE8C511E295E2008A6537 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 6097167A11D82CA000E69124 /* ClockView.h */;
-		name = "ClockView.h: 14";
-		rLen = 0;
-		rLoc = 253;
-		rType = 0;
-		vrLen = 561;
-		vrLoc = 0;
-	};
-	604EE8C611E295E2008A6537 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 6097154411D813AD00E69124 /* OptionsViewController.m */;
-		name = "OptionsViewController.m: 111";
-		rLen = 0;
-		rLoc = 3668;
-		rType = 0;
-		vrLen = 1382;
-		vrLoc = 31;
-	};
-	604EE8C711E295E2008A6537 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 60EE22DB11D7F55B00E889F5 /* OrbiterView.m */;
-		name = "OrbiterView.m: 41";
-		rLen = 0;
-		rLoc = 1014;
-		rType = 0;
-		vrLen = 1143;
-		vrLoc = 0;
-	};
-	604EE8C811E295E2008A6537 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 60EE231911D7F8BA00E889F5 /* Orbit_ClockViewController_iPad.m */;
-		name = "Orbit_ClockViewController_iPad.m: 37";
-		rLen = 0;
-		rLoc = 1003;
-		rType = 0;
-		vrLen = 1441;
-		vrLoc = 0;
-	};
-	604EE8C911E295E2008A6537 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 60EE231E11D7F8D100E889F5 /* Orbit_ClockViewController_iPhone.m */;
-		name = "Orbit_ClockViewController_iPhone.m: 75";
-		rLen = 0;
-		rLoc = 2581;
-		rType = 0;
-		vrLen = 1347;
-		vrLoc = 2001;
-	};
-	604EE8CA11E295E2008A6537 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 6097167B11D82CA000E69124 /* ClockView.m */;
-		name = "ClockView.m: 133";
-		rLen = 0;
-		rLoc = 5495;
-		rType = 0;
-		vrLen = 1600;
-		vrLoc = 4205;
-	};
-	604EE8D711E29656008A6537 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 6097167B11D82CA000E69124 /* ClockView.m */;
-		name = "ClockView.m: 145";
-		rLen = 0;
-		rLoc = 5711;
-		rType = 0;
-		vrLen = 1786;
-		vrLoc = 4108;
-	};
 	6068EFA011E1946900A3F740 /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = 8D1107310486CEB800E47090 /* Orbit_Clock-Info.plist */;
@@ -288,7 +306,7 @@
 	6097154311D813AD00E69124 /* OptionsViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {966, 676}}";
-			sepNavSelRange = "{436, 0}";
+			sepNavSelRange = "{389, 0}";
 			sepNavVisRange = "{153, 1586}";
 		};
 	};
@@ -296,35 +314,38 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {966, 2106}}";
 			sepNavSelRange = "{3668, 0}";
-			sepNavVisRange = "{31, 1382}";
+			sepNavVisRange = "{0, 1347}";
 		};
 	};
 	6097161E11D81DF200E69124 /* ClockViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {966, 561}}";
-			sepNavSelRange = "{395, 0}";
-			sepNavVisRange = "{0, 421}";
+			sepNavSelRange = "{151, 0}";
+			sepNavVisRange = "{0, 678}";
 		};
 	};
 	6097161F11D81DF200E69124 /* ClockViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {966, 663}}";
-			sepNavSelRange = "{423, 0}";
-			sepNavVisRange = "{45, 893}";
+			sepNavIntBoundsRect = "{{0, 0}, {1606, 1001}}";
+			sepNavSelRange = "{457, 0}";
+			sepNavVisRange = "{0, 1313}";
+			sepNavWindowFrame = "{{15, 179}, {1249, 594}}";
 		};
 	};
 	6097167A11D82CA000E69124 /* ClockView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {966, 561}}";
-			sepNavSelRange = "{253, 0}";
-			sepNavVisRange = "{0, 561}";
+			sepNavIntBoundsRect = "{{0, 0}, {1606, 841}}";
+			sepNavSelRange = "{546, 0}";
+			sepNavVisRange = "{0, 1095}";
+			sepNavWindowFrame = "{{15, 179}, {1249, 594}}";
 		};
 	};
 	6097167B11D82CA000E69124 /* ClockView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {978, 2236}}";
-			sepNavSelRange = "{5711, 0}";
-			sepNavVisRange = "{4108, 1786}";
+			sepNavIntBoundsRect = "{{0, 0}, {966, 2028}}";
+			sepNavSelRange = "{4351, 0}";
+			sepNavVisRange = "{0, 1204}";
+			sepNavWindowFrame = "{{15, 179}, {1249, 594}}";
 		};
 	};
 	60DB870711E1C1110035773F /* PBXTextBookmark */ = {
@@ -429,8 +450,8 @@
 	60EE22DB11D7F55B00E889F5 /* OrbiterView.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {966, 702}}";
-			sepNavSelRange = "{1014, 0}";
-			sepNavVisRange = "{0, 1143}";
+			sepNavSelRange = "{1137, 0}";
+			sepNavVisRange = "{169, 1070}";
 		};
 	};
 	60EE22F611D7F62B00E889F5 /* PBXTextBookmark */ = {
@@ -452,9 +473,9 @@
 	};
 	60EE231911D7F8BA00E889F5 /* Orbit_ClockViewController_iPad.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1153, 1287}}";
-			sepNavSelRange = "{1911, 0}";
-			sepNavVisRange = "{1911, 205}";
+			sepNavIntBoundsRect = "{{0, 0}, {1153, 1313}}";
+			sepNavSelRange = "{2207, 0}";
+			sepNavVisRange = "{1747, 1688}";
 		};
 	};
 	60EE231D11D7F8D100E889F5 /* Orbit_ClockViewController_iPhone.h */ = {
@@ -466,9 +487,9 @@
 	};
 	60EE231E11D7F8D100E889F5 /* Orbit_ClockViewController_iPhone.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {978, 1378}}";
-			sepNavSelRange = "{2581, 0}";
-			sepNavVisRange = "{2001, 1347}";
+			sepNavIntBoundsRect = "{{0, 0}, {978, 1391}}";
+			sepNavSelRange = "{1864, 40}";
+			sepNavVisRange = "{1763, 1550}";
 		};
 	};
 }

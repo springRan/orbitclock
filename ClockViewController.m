@@ -10,6 +10,27 @@
 
 @implementation ClockViewController
 
+@synthesize clock_time;
+@synthesize timer;
+@synthesize centiseconds;
+
+- (void)setTime:(NSDate *)time {
+	self.clock_time = time;
+}
+
+- (void)drawTime {
+	
+	self.centiseconds += 0.1;
+	
+	[(ClockView *)self.view setHourHandAngle:0.1];
+	[(ClockView *)self.view setMinuteHandAngle:0.1];
+	[(ClockView *)self.view setSecondHandAngle:0.1];
+	[(ClockView *)self.view setCentisecondHandAngle:self.centiseconds];
+	
+	[self.view setNeedsDisplay];
+	
+}
+
 - (void)showCenterIndicator:(BOOL)visible {
 	[(ClockView *)self.view showCenterIndicator:visible];
 }
@@ -32,6 +53,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	if (self.clock_time == nil) {
+		self.clock_time = [NSDate date];
+	}
+	
+	self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(drawTime) userInfo:nil repeats:YES];
+	
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,10 +67,13 @@
 }
 
 - (void)viewDidUnload {
+	[self.timer release];
     [super viewDidUnload];
 }
 
 - (void)dealloc {
+	[self.timer release];
+	[self.clock_time release];
 	[self.view release];
     [super dealloc];
 }

@@ -10,6 +10,10 @@
 
 @implementation ClockView
 
+@synthesize hour_hand_angle;
+@synthesize minute_hand_angle;
+@synthesize second_hand_angle;
+@synthesize centisecond_hand_angle;
 @synthesize indicators;
 @synthesize hands;
 
@@ -19,41 +23,34 @@
 		self.backgroundColor = [UIColor clearColor];
 		
 		self.indicators = [[NSMutableArray alloc] init];
+		self.hands = [[NSMutableArray alloc] init];
 		
-		/*self.one = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 8.0, 8.0)];
-		self.two = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 8.0, 8.0)];
-		self.three = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 16.0, 16.0)];
-		self.four = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 8.0, 8.0)];
-		self.five = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 8.0, 8.0)];
-		self.six = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 16.0, 16.0)];
-		self.seven = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 8.0, 8.0)];
-		self.eight = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 8.0, 8.0)];
-		self.nine = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 16.0, 16.0)];
-		self.ten = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 8.0, 8.0)];
-		self.eleven = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 8.0, 8.0)];
-		self.twelve = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 16.0, 16.0)];
+		self.hour_hand_angle = DEFAULT_HOUR_HAND_ANGLE;
+		self.minute_hand_angle = DEFAULT_MINUTE_HAND_ANGLE;
+		self.second_hand_angle = DEFAULT_SECOND_HAND_ANGLE;
+		self.centisecond_hand_angle = DEFAULT_CENTISECOND_HAND_ANGLE;
 		
-		[self addSubview:self.one];
-		[self addSubview:self.two];
-		[self addSubview:self.three];
-		[self addSubview:self.four];
-		[self addSubview:self.five];
-		[self addSubview:self.six];
-		[self addSubview:self.seven];
-		[self addSubview:self.eight];
-		[self addSubview:self.nine];
-		[self addSubview:self.ten];
-		[self addSubview:self.eleven];
-		[self addSubview:self.twelve];*/
+		for (int i = 0; i < 13; i++) {
+			
+			OrbiterView *indicator = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 0.0, 0.0)];
+			indicator.stroke_color = [UIColor lightGrayColor];
+			indicator.fill_color = [UIColor darkGrayColor];
+			[self.indicators addObject:indicator];
+			[self addSubview:indicator];
+			[indicator release];
+			
+		}
 		
-		OrbiterView *view1 = [[OrbiterView alloc] initWithFrame:CGRectMake(100.0, 100.0, 42.0, 42.0)];
-		view1.stroke_width = 1.0;
-		view1.stroke_color = [UIColor lightGrayColor];
-		view1.fill_color = [UIColor darkGrayColor];
-		[self.indicators addObject:view1];
-		
-		[self addSubview:view1];
-		[view1 release];
+		for (int i = 0; i < 4; i++) {
+			
+			OrbiterView *hand = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 0.0, 0.0)];
+			hand.stroke_color = [UIColor whiteColor];
+			hand.fill_color = [UIColor whiteColor];
+			[self.hands addObject:hand];
+			[self addSubview:hand];
+			[hand release];
+			
+		}
 		
     }
     return self;
@@ -61,113 +58,103 @@
  
 - (void)drawRect:(CGRect)rect {
 	
-	/*
-	NSMutableArray *viewArray;
-	 
-	viewArray = [[NSMutableArray aolloc] init];
-	UIView *aView = //create a view here
-	[viewArray addObject: aView]
-	 
-	//change to a particular view*/
-	//OrbiterView *view1 =  (OrbiterView *)[self.indicators objectAtIndex:0];
-	//view1.frame = CGRectMake(200.0, 200.0, 8.0, 8.0);
+	/* Calculate center points and sizes for indicators */
+	for (int i = 0; i < 13; i++) {
+		
+		OrbiterView *view =  (OrbiterView *)[self.indicators objectAtIndex:i];
+		
+		if (i % 3 == 0) {
+			view.frame = CGRectMake(0.0, 0.0, floor((self.frame.size.width / 2) * 0.05), floor((self.frame.size.width / 2) * 0.05));
+		} else {
+			view.frame = CGRectMake(0.0, 0.0, floor((self.frame.size.width / 2) * 0.025), floor((self.frame.size.width / 2) * 0.025));
+		}
+		
+		if (i != 0) {
+			double angle = (M_PI / 3.0) - ((M_PI / 6.0) * (double)(i - 1));
+			view.center = CGPointMake(
+				(self.bounds.size.width / 2) + (((self.frame.size.width * 0.95) / 2) * cos(angle)), 
+				(self.bounds.size.width / 2) + (((self.frame.size.width * 0.95) / 2) * sin(angle))
+			);
+		} else {
+			view.center = CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2);
+		}
+		
+	}
 	
-	/*self.one.fillColor = [UIColor lightGrayColor];
-	self.two.fillColor = [UIColor lightGrayColor];
-	self.three.fillColor = [UIColor grayColor];
-	self.four.fillColor = [UIColor lightGrayColor];
-	self.five.fillColor = [UIColor lightGrayColor];
-	self.six.fillColor = [UIColor grayColor];
-	self.seven.fillColor = [UIColor lightGrayColor];
-	self.eight.fillColor = [UIColor lightGrayColor];
-	self.nine.fillColor = [UIColor grayColor];
-	self.ten.fillColor = [UIColor lightGrayColor];
-	self.eleven.fillColor = [UIColor lightGrayColor];
-	self.twelve.fillColor = [UIColor grayColor];
+	/* Calculate center points and sizes for hands */
+	OrbiterView *centisecond_hand =  (OrbiterView *)[self.hands objectAtIndex:0];
+	OrbiterView *second_hand = (OrbiterView *)[self.hands objectAtIndex:1];
+	OrbiterView *minute_hand =  (OrbiterView *)[self.hands objectAtIndex:2];
+	OrbiterView *hour_hand =  (OrbiterView *)[self.hands objectAtIndex:3];
 	
-	//NSLog(@"Center: %@", NSStringFromCGPoint(self.center));
-	//NSLog(@"Size: %@", NSStringFromCGSize(self.frame.size));
+	centisecond_hand.frame = CGRectMake(0.0, 0.0, floor((self.frame.size.width / 2) * 0.02), floor((self.frame.size.width / 2) * 0.02));
+	second_hand.frame = CGRectMake(0.0, 0.0, floor((self.frame.size.width / 2) * 0.08), floor((self.frame.size.width / 2) * 0.08));
+	minute_hand.frame = CGRectMake(0.0, 0.0, floor((self.frame.size.width / 2) * 0.15), floor((self.frame.size.width / 2) * 0.15));
+	hour_hand.frame = CGRectMake(0.0, 0.0, floor((self.frame.size.width / 2) * 0.35), floor((self.frame.size.width / 2) * 0.35));
 	
-	self.one.orbitRadius = (self.frame.size.width - 32.0) / 2;
-	self.two.orbitRadius = (self.frame.size.width - 32.0) / 2;
-	self.three.orbitRadius = (self.frame.size.width - 32.0) / 2;
-	self.four.orbitRadius = (self.frame.size.width - 32.0) / 2;
-	self.five.orbitRadius = (self.frame.size.width - 32.0) / 2;
-	self.six.orbitRadius = (self.frame.size.width - 32.0) / 2;
-	self.seven.orbitRadius = (self.frame.size.width - 32.0) / 2;
-	self.eight.orbitRadius = (self.frame.size.width - 32.0) / 2;
-	self.nine.orbitRadius = (self.frame.size.width - 32.0) / 2;
-	self.ten.orbitRadius = (self.frame.size.width - 32.0) / 2;
-	self.eleven.orbitRadius = (self.frame.size.width - 32.0) / 2;
-	self.twelve.orbitRadius = (self.frame.size.width - 32.0) / 2;
+	second_hand.center = CGPointMake(
+		(self.bounds.size.width / 2) + (((self.frame.size.width * 0.8) / 2) * cos(second_hand_angle)), 
+		(self.bounds.size.width / 2) + (((self.frame.size.width * 0.8) / 2) * sin(second_hand_angle))
+	);
+	centisecond_hand.center = CGPointMake(
+		second_hand.center.x + (((self.frame.size.width * 0.065) / 2) * cos(centisecond_hand_angle)), 
+		second_hand.center.y + (((self.frame.size.width * 0.065) / 2) * sin(centisecond_hand_angle))
+	);
+	minute_hand.center = CGPointMake(
+		(self.bounds.size.width / 2) + (((self.frame.size.width * 0.615) / 2) * cos(minute_hand_angle)), 
+		(self.bounds.size.width / 2) + (((self.frame.size.width * 0.615) / 2) * sin(minute_hand_angle))
+	);
+	hour_hand.center = CGPointMake(
+		(self.bounds.size.width / 2) + (((self.frame.size.width * 0.275) / 2) * cos(hour_hand_angle)), 
+		(self.bounds.size.width / 2) + (((self.frame.size.width * 0.275) / 2) * sin(hour_hand_angle))
+	);
 	
-	self.one.angle = M_PI / 3;
-	self.two.angle = M_PI / 6;
-	self.three.angle = 0;
-	self.four.angle = (11 * M_PI) / 6;
-	self.five.angle = (5 * M_PI) / 3;
-	self.six.angle = (3 * M_PI) / 2;
-	self.seven.angle = (4 * M_PI) / 3;
-	self.eight.angle = (7 * M_PI) / 6;
-	self.nine.angle = M_PI;
-	self.ten.angle = (5 * M_PI) / 6;
-	self.eleven.angle = (2 * M_PI) / 3;
-	self.twelve.angle = M_PI / 2;
-	
-	self.one.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
-	self.two.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
-	self.three.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
-	self.four.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
-	self.five.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
-	self.six.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
-	self.seven.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
-	self.eight.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
-	self.nine.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
-	self.ten.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
-	self.eleven.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);
-	self.twelve.orbitCenter = CGPointMake(self.frame.size.width / 2, self.frame.size.width / 2);*/
-	
+}
+
+- (void)setHourHandAngle:(double)angle {
+	self.hour_hand_angle = angle;
+}
+
+- (void)setMinuteHandAngle:(double)angle {
+	self.minute_hand_angle = angle;
+}
+
+- (void)setSecondHandAngle:(double)angle {
+	self.second_hand_angle = angle;
+}
+
+- (void)setCentisecondHandAngle:(double)angle {
+	self.centisecond_hand_angle = angle;
 }
 
 - (void)showCenterIndicator:(BOOL)visible {
-	NSLog(@"%i", (int)visible);
+	OrbiterView *view =  (OrbiterView *)[self.indicators objectAtIndex:0];
+	view.hidden = !visible;
 }
 
 - (void)showHourIndicators:(BOOL)visible {
-	NSLog(@"%i", (int)visible);
+	for (int i = 0; i < 13; i++) {
+		if (i != 0) {
+			OrbiterView *view =  (OrbiterView *)[self.indicators objectAtIndex:i];
+			view.hidden = !visible;
+		}
+	}
 }
 
 - (void)showSeconds:(BOOL)visible {
-	NSLog(@"%i", (int)visible);
+	OrbiterView *view =  (OrbiterView *)[self.hands objectAtIndex:1];
+	view.hidden = !visible;
 }
 
 - (void)showCentiseconds:(BOOL)visible {
-	NSLog(@"%i", (int)visible);
+	OrbiterView *view =  (OrbiterView *)[self.hands objectAtIndex:0];
+	view.hidden = !visible;
 }
-
-/*
- - (CGPoint)calculateCenter {
- 
- return CGPointMake(self.orbitCenter.x + (self.orbitRadius * cos(self.angle)), self.orbitCenter.y + (self.orbitRadius * sin(self.angle)));
- 
- }
- */
 
 - (void)dealloc {
-	/*[self.one release];
-	[self.two release];
-	[self.three release];
-	[self.four release];
-	[self.five release];
-	[self.six release];
-	[self.seven release];
-	[self.eight release];
-	[self.nine release];
-	[self.ten release];
-	[self.eleven release];
-	[self.twelve release];*/
+	[indicators release];
+	[hands release];
     [super dealloc];
 }
-
 
 @end

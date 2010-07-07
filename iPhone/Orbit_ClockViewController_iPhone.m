@@ -58,6 +58,7 @@
 	[super viewDidLoad];
  
 	self.clock_view = [ClockViewController alloc];
+	[self.clock_view setTime:[NSDate date]];
 	self.clock_view.view.frame = CGRectMake(0, 0, CLOCK_SIZE.width, CLOCK_SIZE.height);
 	self.clock_view.view.center = VIEW_CENTER_PORTRAIT;
 	[self.view addSubview:self.clock_view.view];
