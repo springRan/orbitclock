@@ -16,22 +16,22 @@
 
 - (void)showCenterIndicator:(BOOL)visible {
 	[self.clock_view showCenterIndicator:visible];
-	[self.prefs setInteger:visible forKey:@"center_indicator_visible"];
+	[self.prefs setBool:visible forKey:@"center_indicator_visible"];
 }
 
 - (void)showHourIndicators:(BOOL)visible {
 	[self.clock_view showHourIndicators:visible];
-	[self.prefs setInteger:visible forKey:@"hour_indicators_visible"];
+	[self.prefs setBool:visible forKey:@"hour_indicators_visible"];
 }
 
 - (void)showSeconds:(BOOL)visible {
 	[self.clock_view showSeconds:visible];
-	[self.prefs setInteger:visible forKey:@"seconds_visible"];
+	[self.prefs setBool:visible forKey:@"seconds_visible"];
 }
 
 - (void)showCentiseconds:(BOOL)visible {
 	[self.clock_view showCentiseconds:visible];
-	[self.prefs setInteger:visible forKey:@"centiseconds_visible"];
+	[self.prefs setBool:visible forKey:@"centiseconds_visible"];
 }
 
 - (void)optionsViewControllerDidFinish {
@@ -42,10 +42,10 @@
 	
 	OptionsViewController *options_view = [[OptionsViewController alloc] initWithNibName:@"OptionsViewController" bundle:nil];
 	options_view.delegate = self;
-	options_view.center_indicator_visible = [self.prefs integerForKey:@"center_indicator_visible"];
-	options_view.hour_indicators_visible = [self.prefs integerForKey:@"hour_indicators_visible"];
-	options_view.seconds_visible = [self.prefs integerForKey:@"seconds_visible"];
-	options_view.centiseconds_visible = [self.prefs integerForKey:@"centiseconds_visible"];
+	options_view.center_indicator_visible = [self.prefs boolForKey:@"center_indicator_visible"];
+	options_view.hour_indicators_visible = [self.prefs boolForKey:@"hour_indicators_visible"];
+	options_view.seconds_visible = [self.prefs boolForKey:@"seconds_visible"];
+	options_view.centiseconds_visible = [self.prefs boolForKey:@"centiseconds_visible"];
 	options_view.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
 	[self presentModalViewController:options_view animated:YES];
 	
@@ -64,15 +64,26 @@
 	[self.view addSubview:self.clock_view.view];
 	
 	self.prefs = [NSUserDefaults standardUserDefaults];
-	[self showCenterIndicator:[self.prefs integerForKey:@"center_indicator_visible"]];
-	[self showHourIndicators:[self.prefs integerForKey:@"hour_indicators_visible"]];
-	[self showSeconds:[self.prefs integerForKey:@"seconds_visible"]];
-	[self showCentiseconds:[self.prefs integerForKey:@"centiseconds_visible"]];
+	
+	NSDictionary *app_prefs = [NSDictionary dictionaryWithObjectsAndKeys:
+							   [NSNumber numberWithBool:TRUE], @"center_indicator_visible",
+							   [NSNumber numberWithBool:TRUE], @"hour_indicators_visible",
+							   [NSNumber numberWithBool:TRUE], @"seconds_visible",
+							   [NSNumber numberWithBool:TRUE], @"centiseconds_visible",
+							   nil];
+	
+	[self.prefs registerDefaults:app_prefs];
+	[self.prefs synchronize];
+	
+	[self showCenterIndicator:[self.prefs boolForKey:@"center_indicator_visible"]];
+	[self showHourIndicators:[self.prefs boolForKey:@"hour_indicators_visible"]];
+	[self showSeconds:[self.prefs boolForKey:@"seconds_visible"]];
+	[self showCentiseconds:[self.prefs boolForKey:@"centiseconds_visible"]];
  
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return YES;
 }
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {

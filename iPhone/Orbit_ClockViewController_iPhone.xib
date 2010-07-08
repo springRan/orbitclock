@@ -78,9 +78,6 @@
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MAA</bytes>
 				</object>
-				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics">
-					<int key="IBUIStatusBarStyle">2</int>
-				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 		</object>
@@ -155,7 +152,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>Orbit_ClockViewController_iPhone</string>
 					<string>UIResponder</string>
-					<string>{{556, 276}, {320, 480}}</string>
+					<string>{{556, 296}, {320, 460}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>

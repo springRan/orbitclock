@@ -12,7 +12,7 @@
 
 #define CLOCK_SIZE CGSizeMake(768.0, 768.0)
 #define VIEW_CENTER_PORTRAIT CGPointMake(384.0, 502.0)
-#define VIEW_CENTER_LANDSCAPE CGPointMake(374.0, 512.0)
+#define VIEW_CENTER_LANDSCAPE CGPointMake(512.0, 374.0)
 
 @interface Orbit_ClockViewController_iPad : UIViewController <OptionsViewControllerDelegate> {
 	NSUserDefaults *prefs;

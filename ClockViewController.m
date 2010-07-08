@@ -20,12 +20,26 @@
 
 - (void)drawTime {
 	
-	self.centiseconds += 0.1;
+	NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+	NSDateComponents *components = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:self.clock_time];
+	[calendar release];
 	
-	[(ClockView *)self.view setHourHandAngle:0.1];
-	[(ClockView *)self.view setMinuteHandAngle:0.1];
-	[(ClockView *)self.view setSecondHandAngle:0.1];
-	[(ClockView *)self.view setCentisecondHandAngle:self.centiseconds];
+	int new_hour = [components hour];
+	
+	if (new_hour > 12) {
+		new_hour = new_hour - 12;
+	}
+	
+	double seconds = [components second] + self.centiseconds;
+	double minutes = [components minute] * 60 + seconds;
+	double hours = new_hour * 3600 + minutes;
+	
+	[(ClockView *)self.view setHourHandAngle:(((2 * M_PI) / 12) * (hours / 3600)) - (M_PI / 2)];
+	[(ClockView *)self.view setMinuteHandAngle:(((2 * M_PI) / 60) * (minutes / 60)) - (M_PI / 2)];
+	[(ClockView *)self.view setSecondHandAngle:(((2 * M_PI) / 60) * seconds) - (M_PI / 2)];
+	[(ClockView *)self.view setCentisecondHandAngle:((self.centiseconds * 360) * (M_PI / 180)) - (M_PI / 2)];
+	
+	self.centiseconds += 0.01;
 	
 	[self.view setNeedsDisplay];
 	
@@ -58,7 +72,7 @@
 		self.clock_time = [NSDate date];
 	}
 	
-	self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(drawTime) userInfo:nil repeats:YES];
+	self.timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(drawTime) userInfo:nil repeats:YES];
 	
 }
 

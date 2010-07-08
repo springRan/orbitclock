@@ -10,7 +10,8 @@
 #import "ClockViewController.h"
 #import "OptionsViewController.h"
 
-#define CLOCK_SIZE CGSizeMake(320.0, 320.0)
+
+#define CLOCK_SIZE CGSizeMake(300.0, 300.0)
 #define VIEW_CENTER_PORTRAIT CGPointMake(160.0, 230.0)
 #define VIEW_CENTER_LANDSCAPE CGPointMake(240.0, 150.0)
 
