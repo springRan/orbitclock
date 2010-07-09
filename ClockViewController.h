@@ -13,11 +13,13 @@
 	NSDate *clock_time;
 	NSTimer *timer;
 	double centiseconds;
+	int last_second;
 }
 
 @property (nonatomic, retain) NSDate *clock_time;
 @property (nonatomic, retain) NSTimer *timer;
 @property (readwrite, assign) double centiseconds;
+@property (readwrite, assign) int last_second;
 
 - (void)setTime:(NSDate *)time;
 - (void)drawTime;

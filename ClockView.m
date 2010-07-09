@@ -33,7 +33,7 @@
 		for (int i = 0; i < 13; i++) {
 			
 			OrbiterView *indicator = [[OrbiterView alloc] initWithFrame:CGRectMake(0.0, 0.0, 0.0, 0.0)];
-			indicator.stroke_color = [UIColor lightGrayColor];
+			indicator.stroke_color = [UIColor darkGrayColor];
 			indicator.fill_color = [UIColor darkGrayColor];
 			[self.indicators addObject:indicator];
 			[self addSubview:indicator];
@@ -64,19 +64,19 @@
 		OrbiterView *view =  (OrbiterView *)[self.indicators objectAtIndex:i];
 		
 		if (i % 3 == 0) {
-			view.frame = CGRectMake(0.0, 0.0, floor((self.frame.size.width / 2) * 0.05), floor((self.frame.size.width / 2) * 0.05));
+			view.frame = CGRectMake(0.0, 0.0, ceil((self.frame.size.width / 2) * 0.05), ceil((self.frame.size.width / 2) * 0.05));
 		} else {
-			view.frame = CGRectMake(0.0, 0.0, floor((self.frame.size.width / 2) * 0.025), floor((self.frame.size.width / 2) * 0.025));
+			view.frame = CGRectMake(0.0, 0.0, ceil((self.frame.size.width / 2) * 0.025), ceil((self.frame.size.width / 2) * 0.025));
 		}
 		
 		if (i != 0) {
 			double angle = (M_PI / 3.0) - ((M_PI / 6.0) * (double)(i - 1));
 			view.center = CGPointMake(
-				(self.bounds.size.width / 2) + (((self.frame.size.width * 0.95) / 2) * cos(angle)), 
-				(self.bounds.size.width / 2) + (((self.frame.size.width * 0.95) / 2) * sin(angle))
+				ceil((self.bounds.size.width / 2) + (((self.frame.size.width * 0.95) / 2) * cos(angle))), 
+				ceil((self.bounds.size.width / 2) + (((self.frame.size.width * 0.95) / 2) * sin(angle)))
 			);
 		} else {
-			view.center = CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2);
+			view.center = CGPointMake(ceil(self.bounds.size.width / 2), ceil(self.bounds.size.height / 2));
 		}
 		
 	}
@@ -87,10 +87,10 @@
 	OrbiterView *minute_hand =  (OrbiterView *)[self.hands objectAtIndex:2];
 	OrbiterView *hour_hand =  (OrbiterView *)[self.hands objectAtIndex:3];
 	
-	centisecond_hand.frame = CGRectMake(0.0, 0.0, floor((self.frame.size.width / 2) * 0.02), floor((self.frame.size.width / 2) * 0.02));
-	second_hand.frame = CGRectMake(0.0, 0.0, floor((self.frame.size.width / 2) * 0.08), floor((self.frame.size.width / 2) * 0.08));
-	minute_hand.frame = CGRectMake(0.0, 0.0, floor((self.frame.size.width / 2) * 0.15), floor((self.frame.size.width / 2) * 0.15));
-	hour_hand.frame = CGRectMake(0.0, 0.0, floor((self.frame.size.width / 2) * 0.35), floor((self.frame.size.width / 2) * 0.35));
+	centisecond_hand.frame = CGRectMake(0.0, 0.0, ceil((self.frame.size.width / 2) * 0.02), ceil((self.frame.size.width / 2) * 0.02));
+	second_hand.frame = CGRectMake(0.0, 0.0, ceil((self.frame.size.width / 2) * 0.08), ceil((self.frame.size.width / 2) * 0.08));
+	minute_hand.frame = CGRectMake(0.0, 0.0, ceil((self.frame.size.width / 2) * 0.15), ceil((self.frame.size.width / 2) * 0.15));
+	hour_hand.frame = CGRectMake(0.0, 0.0, ceil((self.frame.size.width / 2) * 0.35), ceil((self.frame.size.width / 2) * 0.35));
 	
 	second_hand.center = CGPointMake(
 		(self.bounds.size.width / 2) + (((self.frame.size.width * 0.8) / 2) * cos(second_hand_angle)), 

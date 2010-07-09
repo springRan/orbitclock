@@ -13,6 +13,7 @@
 @synthesize clock_time;
 @synthesize timer;
 @synthesize centiseconds;
+@synthesize last_second;
 
 - (void)setTime:(NSDate *)time {
 	self.clock_time = time;
@@ -20,6 +21,7 @@
 
 - (void)drawTime {
 	
+	NSTimeInterval duration = [[NSDate date] timeIntervalSinceDate:self.clock_time];
 	NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 	NSDateComponents *components = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:self.clock_time];
 	[calendar release];
@@ -30,17 +32,19 @@
 		new_hour = new_hour - 12;
 	}
 	
-	double seconds = [components second] + self.centiseconds;
+	double seconds = [components second] + duration;
 	double minutes = [components minute] * 60 + seconds;
 	double hours = new_hour * 3600 + minutes;
 	
 	[(ClockView *)self.view setHourHandAngle:(((2 * M_PI) / 12) * (hours / 3600)) - (M_PI / 2)];
 	[(ClockView *)self.view setMinuteHandAngle:(((2 * M_PI) / 60) * (minutes / 60)) - (M_PI / 2)];
 	[(ClockView *)self.view setSecondHandAngle:(((2 * M_PI) / 60) * seconds) - (M_PI / 2)];
-	[(ClockView *)self.view setCentisecondHandAngle:((self.centiseconds * 360) * (M_PI / 180)) - (M_PI / 2)];
+	[(ClockView *)self.view setCentisecondHandAngle:(((2 * M_PI) / 100) * (duration * 100)) - (M_PI / 2)];
 	
-	self.centiseconds += 0.01;
-	
+	if (self.view.hidden) {
+		[self.view setHidden:NO];
+	}
+
 	[self.view setNeedsDisplay];
 	
 }
@@ -63,6 +67,7 @@
 
 - (void)loadView {
 	self.view = [[ClockView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+	[self.view setHidden:YES];
 }
 
 - (void)viewDidLoad {
