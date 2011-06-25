@@ -6,4 +6,4 @@ build/
 *.perspective 
 *.perspectivev3 
 *.xcworkspace/ 
-xcuserdata/
+*/xcuserdata/
