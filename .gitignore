@@ -1,2 +1,9 @@
 # Ignore files for orbitclock.acwrightdesign.com
-build/
+build/ 
+*.pyc 
+*~.nib/ 
+*.pbxuser 
+*.perspective 
+*.perspectivev3 
+*.xcworkspace/ 
+xcuserdata/
